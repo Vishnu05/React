@@ -10,9 +10,9 @@
 /components/readme.md
 
 #seaons 
-/seasons/node_modules
-/seasons/package-lock.json
-/seasons/readme.md
+/season/node_modules
+/season/package-lock.json
+/season/readme.md
 
 #react-native
 /my-app-rn/node_modules
