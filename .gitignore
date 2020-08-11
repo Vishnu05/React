@@ -1,0 +1,25 @@
+
+
+.vscode 
+
+# components 
+/components/node_modules
+/components/build
+/components/npm-debug.log
+/components/package-lock.json
+/components/readme.md
+
+#seaons 
+/seasons/node_modules
+/seasons/package-lock.json
+/seasons/readme.md
+
+#react-native
+/my-app-rn/node_modules
+/my-app-rn/.expo
+/my-app-rn/package-lock.json
+/my-app-rn/readme.md
+
+#tic tok
+/tic tok/package-lock.json
+/tic tok/readme.md
