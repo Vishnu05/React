@@ -5,7 +5,7 @@ export interface ClickState {
     count: number;
 }
 
-let counts = 1
+// let counts = 1
 export default class ClickComponent extends Component<{}, ClickState> {
 
     constructor(props: any, state: ClickState) {
@@ -16,10 +16,10 @@ export default class ClickComponent extends Component<{}, ClickState> {
     }
 
     // counts = 1
-    click() {
-
-        console.log('Function is called ', counts++)
-      //  this.setState({ count: this.counts++ })
+    click = () => {
+        let value = this.state.count + 1
+        console.log('Function is called ')
+        this.setState({ count: value })
     }
 
     render() {

@@ -10,7 +10,7 @@ export interface AxiosState {
     email: string,
     paraData: string,
     inputParaData: string,
-    backendData: object,
+    backendData: any,
     stateData: any,
 }
 
@@ -25,13 +25,13 @@ export default class AxiosComponent extends Component<{}, AxiosState> {
             email: 'name',
             paraData: 'This is the data which I set in ',
             inputParaData: '',
-            backendData: Object,
+            backendData: null,
             stateData: ''
         }
 
     }
 
-    display() {
+    display = () => {
 
         let data = axios.get('http://localhost:8080/api/employee/3')
             .then((result) => {
@@ -68,7 +68,7 @@ export default class AxiosComponent extends Component<{}, AxiosState> {
         })
     }
 
-    formValidation() {
+    formValidation = () => {
         console.log('Validation function work')
         console.log("value of the first name : ")
         if (this.state.firstName === '') {
@@ -78,17 +78,17 @@ export default class AxiosComponent extends Component<{}, AxiosState> {
         }
     }
 
-    stateFunction() {
+    stateFunction = () => {
         axios({
             method: 'GET',
             url: 'http://localhost:8080/api/react'
         }).then((value) => {
 
             console.log('React state is ', value)
-            this.setState({ stateData: value })
+            this.setState({ stateData: value.data })
         })
     }
-   
+
 
     render() {
 
@@ -104,7 +104,7 @@ export default class AxiosComponent extends Component<{}, AxiosState> {
                     <p onClick={this.display} >Dislay content from backend </p>
 
                     {/* Error is showing if I do like this? but why  */}
-                    {/* <p>Data: {this.state.backendData}</p> */}
+                    <p>Data: {this.state.backendData}</p>
                     {/* <input type="text" value={this.state.backendData}/> */}
                     <div>
                         <h5><p onClick={this.stateFunction} >Normal data from backend :</p> </h5>
