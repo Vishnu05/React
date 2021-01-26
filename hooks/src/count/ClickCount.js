@@ -7,6 +7,7 @@ const ClickCount = () => {
     const [count, setCount] = useState(0);
 
     // first value is for using or consuming the value. Second parameter is to update the value
+    // useState('') inital value for the state
     const [input, setInput] = useState('')
 
     const [renderCount, setRenderCount] = useState(0)

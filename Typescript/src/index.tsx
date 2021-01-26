@@ -1,28 +1,9 @@
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import InputComponent from './InputComponent'
-import TextAreaComponent from './TextAreaComponent'
-import TimerComponent from './TimerComponent'
-import PropsComponent from './PropsComponent'
-import AxiosComponent from './AxiosComponent'
-import ClickComponent from './ClickComponent'
-import Hooks from './Hooks'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App'
 
-const App = () => {
-    return (
-        <div>
-            <TimerComponent />
-            <InputComponent />
-            <TextAreaComponent />
-            <PropsComponent />
-            <AxiosComponent />
-            <ClickComponent />
-            <Hooks />
 
-        </div>
-    )
-}
 
 ReactDOM.render(
     <React.StrictMode>
