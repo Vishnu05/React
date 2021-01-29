@@ -46,6 +46,10 @@ export default class ClassUser extends Component {
 
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     // users =
     render() {
         return (
@@ -54,18 +58,18 @@ export default class ClassUser extends Component {
                 <br /><br />
                 <div>
 
-                    {/* <form > */}
+                    <form onSubmit={this.handleSubmit}>
 
-                    <div>
-                        <input type="text" onChange={(val) => this.setState({ username: val.target.value })} />
-                    </div>
-                    <div>
-                        <input type="email" onChange={(val) => this.setState({ email: val.target.value })} />
-                    </div>
-                    <div>
-                        <button type="submit" onClick={this.addUser}> Submit</button>
-                    </div>
-                    {/* </form> */}
+                        <div>
+                            <input type="text" onChange={(val) => this.setState({ username: val.target.value })} />
+                        </div>
+                        <div>
+                            <input type="email" onChange={(val) => this.setState({ email: val.target.value })} />
+                        </div>
+                        <div>
+                            <button type="submit" onClick={this.addUser}> Submit</button>
+                        </div>
+                    </form>
                 </div>
 
                 <table className="table">

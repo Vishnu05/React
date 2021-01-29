@@ -1,11 +1,7 @@
 import React from 'react'
-import ClassUser from './Table/ClassUser'
-import Users from './Table/Users'
-import CountState from './UseState/CountState'
-import ObjectState from './UseState/ObjectState'
-// import ClickCount from './count/ClickCount'
-// import TwitterApi from './Api/TwitterApi'
-// import CountUseEffect from './UseEffect/CountUseEffect'
+import AppCrud from './Crud/AppCrud'
+
+
 
 const App = () => {
 
@@ -16,9 +12,10 @@ const App = () => {
             {/* <TwitterApi />
             <CountUseEffect /> */}
             {/* <CountState /> */}
-            <ObjectState />
-            {/* <Users /> */}
-            <ClassUser />
+            {/* <ObjectState />
+            <UserList /> */}
+            {/* <ClassUser /> */}
+            <AppCrud />
         </div>
     )
 }
