@@ -24,6 +24,7 @@ const AddUserForm = props => {
                 // if (!user.name || !user.username) return
 
                 props.addUser(user)
+                
                 console.log('users : ', user)
                 setUser(initialFormState)
             }}

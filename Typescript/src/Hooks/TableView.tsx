@@ -11,7 +11,7 @@ export default function TableView(props: any) {
 
     const [user, setUser] = useState(dataUsers)
 
-    const initialValue = { id: null, name: '', email: '' }
+    // const initialValue = { id: null, name: '', email: '' }
 
 
     const addUser = (users: any) => {

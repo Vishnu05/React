@@ -1,5 +1,6 @@
 import React from 'react'
-import AppCrud from './Crud/AppCrud'
+import EventComponent from './Events/EventComponent';
+
 
 
 
@@ -15,7 +16,8 @@ const App = () => {
             {/* <ObjectState />
             <UserList /> */}
             {/* <ClassUser /> */}
-            <AppCrud />
+            {/* <AppCrud /> */}
+            <EventComponent />
         </div>
     )
 }

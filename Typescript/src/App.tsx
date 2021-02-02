@@ -1,7 +1,7 @@
 
 import React from 'react';
-import Hooks from './Hooks/Hooks'
-import TableView from './Hooks/TableView';
+
+import { AppTodo } from './Todos/AppTodo';
 
 // arrow function create this? 
 const App = () => {
@@ -9,9 +9,7 @@ const App = () => {
     return (
         <div>
 
-            <Hooks />
-            <br />
-            <TableView />
+            <AppTodo />
         </div>
     )
 
