@@ -1,11 +1,10 @@
 import axios from 'axios'
 import  { useState } from 'react'
 import { FormType } from './Employee'
-import TableDisplay from './TableDisplay'
 
 
 
-const FormTable = () => {
+const EmployeeForm = () => {
 
 
     const initialForm: FormType = { userName: '', firstName: '', lastName: '', email: '', id: 0}
@@ -55,10 +54,11 @@ const FormTable = () => {
             <div className="container">
                 <form onSubmit={(event) => {
                     event.preventDefault();
+                    setFormData(initialForm)
                    
                 }} id="create-employee-form">
                     <div>
-                        <input onChange={handleInput} name="userName" className="form-control" placeholder="Username" type="text" />
+                        <input  onChange={handleInput} name="userName" className="form-control" placeholder="Username" type="text" />
                     </div>
                     <br />
                     <div>
@@ -83,10 +83,10 @@ const FormTable = () => {
                 </form>
             </div>
 
-            <TableDisplay />
+          
         </div>
     )
 }
 
-export default FormTable
+export default EmployeeForm;
 

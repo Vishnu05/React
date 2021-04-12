@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import { FormType } from './Employee';
+import {useParams, useHistory} from 'react-router-dom';
 
-function TableDisplay() {
+function TableDisplay( props: any) {
 
     const [empArrayData, setData] = useState<FormType[]>([]);
+    const [edit, setEdit] = useState<FormType>();
 
 
     /** without useEffect the axios get method, this is rendering to much
@@ -19,10 +21,11 @@ function TableDisplay() {
                 //    returnta;
 
             })
-       
-    },[])
+        /** This empty array is important */
+    }, [])
 
     console.log('render ')
+
 
     const deleteEmployeeById = (data: FormType) => {
 
@@ -34,7 +37,21 @@ function TableDisplay() {
         setData(empArrayData.filter(empId => empId.id !== data.id))
         // empArrayData.filter(empId => empId.id !== data.id);
         console.log('after deleting ', empArrayData)
+    }
 
+    const history = useHistory()
+    const editEmployeeById = (editData: FormType) => {
+
+        const id = editData.id;
+
+        // const { data: any } = useParams;
+
+        history.push(`/editform/${id}`)
+        // history.push('/createform')
+        // props.history.push(`/editform`)
+        // console.log('')
+        console.log('Edit function called', editData);
+      
 
     }
 
@@ -63,7 +80,9 @@ function TableDisplay() {
                                 <td>{iter.firstName}</td>
                                 <td>{iter.lastName}</td>
                                 <td>
-                                    <button className="btn btn-primary">Edit</button>
+                                    <button onClick={() => editEmployeeById(iter)} className="btn btn-primary">
+                                            Edit
+                                    </button>
                                     <button onClick={() => deleteEmployeeById(iter)} className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>
@@ -73,6 +92,11 @@ function TableDisplay() {
                         </td></tr>
                     </tbody>
                 </table>
+            </div>
+
+            <div>
+
+
             </div>
 
         </div>

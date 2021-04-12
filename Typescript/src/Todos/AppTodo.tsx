@@ -1,5 +1,7 @@
 
 import React from 'react'
+import FormValidation from './FormValidation';
+
 import { TodoList } from './TodoList';
 
 
@@ -13,7 +15,15 @@ export const AppTodo: React.FC = () => {
     return (
 
         <div>
-            <TodoList todo={todos[0]} />
+
+            {todos.map((k, i) => (
+                <div key={k.text}>
+                    <TodoList todo={todos[i]} />
+                </div>
+            ))}
+
+           <FormValidation />
+
         </div>
     )
 

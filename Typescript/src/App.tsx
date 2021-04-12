@@ -1,15 +1,18 @@
 
 import React from 'react';
+import Navbar from './Navbar';
 
-import { AppTodo } from './Todos/AppTodo';
+
+
 
 // arrow function create this? 
 const App = () => {
 
     return (
         <div>
-
-            <AppTodo />
+            <Navbar />
+            
+            
         </div>
     )
 

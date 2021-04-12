@@ -25,7 +25,7 @@ const AppCrud = (props) => {
         setUsers([...users, user])
     }
 
-    const deleteUser = id => {
+    const deleteUser = (id) => {
         setUsers(users.filter((user) => user.id !== id))
     }
 
