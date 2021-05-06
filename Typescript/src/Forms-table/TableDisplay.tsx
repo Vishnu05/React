@@ -3,7 +3,7 @@ import axios from 'axios';
 import { FormType } from './Employee';
 import {useParams, useHistory} from 'react-router-dom';
 
-function TableDisplay( props: any) {
+function TableDisplay( ) {
 
     const [empArrayData, setData] = useState<FormType[]>([]);
     const [edit, setEdit] = useState<FormType>();

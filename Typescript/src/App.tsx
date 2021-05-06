@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import Navbar from './Navbar';
 
 
@@ -7,12 +7,10 @@ import Navbar from './Navbar';
 
 // arrow function create this? 
 const App = () => {
-
+    
     return (
         <div>
-            <Navbar />
-            
-            
+            <Navbar />            
         </div>
     )
 

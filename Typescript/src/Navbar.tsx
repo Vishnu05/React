@@ -9,7 +9,7 @@ function Navbar() {
         <div>
 
             <div>
-                <nav className="navbar navbar-light bg-light">
+                <nav >
 
                     <BrowserRouter>
                         <ul>

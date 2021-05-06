@@ -54,7 +54,7 @@ function EditForm(props: any) {
 
 
     return (
-        <div>
+        <div className="conatiner">
             <form onSubmit={(event) => {
                 event.preventDefault();
 
